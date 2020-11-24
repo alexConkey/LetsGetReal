@@ -10,6 +10,7 @@ public class RationalNumber extends RealNumber {
     numerator = nume;
     denominator = deno;
     super(0.0);//this value is ignored!
+    reduce();
   }
 
   public double getValue(){
@@ -101,12 +102,12 @@ public class RationalNumber extends RealNumber {
   *Return a new RationalNumber that is the sum of this and the other
   */
   public RationalNumber add(RationalNumber other){
-    return new RationalNumber();
+    return new RationalNumber(numerator*other.getDenominator() + other.getNumerator()*denominator, denominator*other.getDenominator());
   }
   /**
   *Return a new RationalNumber that this minus the other
   */
   public RationalNumber subtract(RationalNumber other){
-    return null;
+    return new RationalNumber(numerator*other.getDenominator() - other.getNumerator()*denominator, denominator*other.getDenominator());
   }
 }

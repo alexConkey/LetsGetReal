@@ -7,31 +7,33 @@ public class RationalNumber extends RealNumber {
   *@param deno the denominator
   */
   public RationalNumber(int nume, int deno){
+    numerator = nume;
+    denominator = deno;
     super(0.0);//this value is ignored!
   }
 
   public double getValue(){
-    return 0.0;
+    return Integer.doubleValue(numerator)/Integer.doubleValue(denominator);
   }
 
   /**
   *@return the numerator
   */
   public int getNumerator(){
-    return 0;
+    return numerator;
   }
   /**
   *@return the denominator
   */
   public int getDenominator(){
-    return 0;
+    return denominator;
   }
   /**
   *@return a new RationalNumber that has the same numerator
   *and denominator as this RationalNumber but reversed.
   */
   public RationalNumber reciprocal(){
-    return null;
+    return Integer.doubleValue(denominator)/Integer.doubleValue(numerator);
   }
   /**
   *@return true when the RationalNumbers have the same numerators and denominators, false otherwise.
@@ -54,7 +56,7 @@ public class RationalNumber extends RealNumber {
   */
   private static int gcd(int a, int b){
     /*use euclids method or a better one*/
-    http://sites.math.rutgers.edu/~greenfie/gs2004/euclid.html
+
     return 0;
   }
 
@@ -93,4 +95,4 @@ public class RationalNumber extends RealNumber {
   public RationalNumber subtract(RationalNumber other){
     return null;
   }
-} 
+}

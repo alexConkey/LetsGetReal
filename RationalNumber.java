@@ -7,7 +7,7 @@ public class RationalNumber extends RealNumber {
   *@param deno the denominator
   */
   public RationalNumber(int nume, int deno){
-    super(0.0);//this value is ignored!
+    super(Double.valueOf(nume)/Double.valueOf(deno));//this value is ignored!
     numerator = nume;
     denominator = deno;
 

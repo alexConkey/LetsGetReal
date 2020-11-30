@@ -8,8 +8,10 @@ public abstract class Number{
   public int compareTo(Number other){
     if (equals(other)){
       return 0;
-    }else if{
-      
+    }else if (getValue() > other.getValue()){
+      return 1;
+    }else{
+      return -1;
     }
     //TO BE IMPLEMENTED
   }

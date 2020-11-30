@@ -48,6 +48,11 @@ public class RationalNumber extends RealNumber {
   *@return the value expressed as "3/4" or "8/3"
   */
   public String toString(){
+    if (numerator == 0){
+      return "0";
+    }else if (denominator == 1){
+      return Integer.toString(numerator);
+    }
     return Integer.toString(numerator) + "/" + Integer.toString(denominator);
   }
 
